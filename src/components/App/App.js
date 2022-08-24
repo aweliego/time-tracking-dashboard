@@ -5,12 +5,12 @@ import Dashboard from '../Dashboard/Dashboard';
 
 const App = () => {
   return (
-    <>
+    <article className="App-container">
       <SideBar />
       <main>
         <Dashboard />
       </main>
-    </>
+    </article>
   );
 };
 

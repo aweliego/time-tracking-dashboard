@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1.5rem;
+  font-family: Rubik, sans-serif;
+  color: #fff;
+}
+
+@media only screen and (max-width: 650px) {
+  .App-container {
+    /* Collapses into 1 column */
+    grid-template-columns: 1fr;
+  }
+}

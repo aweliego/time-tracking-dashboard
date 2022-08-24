@@ -1,13 +1,13 @@
 import React from 'react';
-//import Activity from '../Activity/Activity';
+import './Dashboard.css';
+import Activity from '../Activity/Activity';
 
 const Dashboard = () => {
-    return (
-      <section className="Dashboard-grid">
-        
-      </section>
-    );
-  }
-  
-  export default Dashboard;
-  
+  return (
+    <section className="Dashboard-grid">
+      <Activity />
+    </section>
+  );
+};
+
+export default Dashboard;

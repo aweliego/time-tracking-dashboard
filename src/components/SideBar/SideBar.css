@@ -1,0 +1,28 @@
+.SideBar {
+    grid-row: 1 / -1;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.SideBar img {
+  width: 100px;
+  border: 3px solid hsl(236, 100%, 87%);
+  border-radius: 50%;
+}
+
+.user {
+  background-color: hsl(259, 88%, 53%);
+  font-weight: 300;
+  border-radius: 10px;
+}
+
+.user h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.timeframes {
+  font-size: 0.8rem;
+  list-style-type: none;
+}
