@@ -1,8 +1,8 @@
 .SideBar {
-    grid-row: 1 / -1;
-    background-color: hsl(235, 46%, 20%);
-    border-radius: 10px;
-    font-weight: 400;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  font-weight: 400;
+  min-width: 150px;
 }
 
 .SideBar img {
