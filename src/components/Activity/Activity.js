@@ -4,7 +4,7 @@ import './Activity.css';
 const Activity = () => {
   return (
     <>
-      <article className="Activity-Card">
+     <article className="Activity-Card">
         <div class="background-icon"></div>
         <section className="Activity">
           <h4 className="title">Work</h4>

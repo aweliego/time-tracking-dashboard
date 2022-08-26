@@ -3,18 +3,25 @@
   border-radius: 10px;
   font-weight: 400;
   min-width: 150px;
+  /* width: 250px; */
 }
 
-.SideBar img {
-  width: 100px;
+.user img {
+  display: block;
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
   border: 3px solid hsl(236, 100%, 87%);
   border-radius: 50%;
+  margin: 15px 0 0 10px;
 }
 
 .user {
   background-color: hsl(259, 88%, 53%);
   font-weight: 300;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .user h1 {
@@ -22,7 +29,54 @@
   font-size: 2rem;
 }
 
+.user-text {
+  padding: 20px 0 70px 15px;
+  width: 80%;
+}
+
 .timeframes {
-  font-size: 0.8rem;
+  font-size: 1rem;
   list-style-type: none;
+  padding: 15px;
+}
+
+.timeframes li {
+  padding: 10px 0;
+  opacity: 0.5;
+}
+
+.timeframes .active {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .user,
+  .timeframes {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .timeframes {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .user {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .user img {
+    margin: 0;
+  }
+
+  .user-text {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .user h1 {
+    font-size: 1.8rem;
+  }
 }

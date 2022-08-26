@@ -6,14 +6,16 @@ const SideBar = () => {
     <header className="SideBar">
       <section className="user">
         <img src="../../../images/image-jeremy.png" alt="jeremy" />
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
+        <div className="user-text">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
       </section>
 
       <nav>
         <ul className="timeframes">
           <li>Daily</li>
-          <li>Weekly</li>
+          <li className="active">Weekly</li>
           <li>Monthly</li>
         </ul>
       </nav>

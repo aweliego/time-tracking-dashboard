@@ -1,23 +1,25 @@
 .Activity-Card {
   background-color: hsl(15, 100%, 70%);
   background-image: url(../../../public/images/icon-work.svg);
-  border-radius: 10px;
+  /* width: 200px; */
 }
 
 .Activity {
   background-color: hsl(235, 46%, 20%);
-  height: 130px;
-  border-radius: 10px;
+  /* width: 200px; */
   padding: 10px;
+  height: 190px;
 }
 
-.Activity img {
-  width: 15px;
-  vertical-align: middle;
+.Activity-Card,
+.Activity {
+  /* If I set this height for both, cards are too big on wide screens, but if I don't the bg sticks out when resizing */
+  /* height: 190px; */
+  border-radius: 10px;
 }
 
 .background-icon {
-  height: 20px;
+  height: 30px;
 }
 
 .title {
@@ -25,6 +27,11 @@
   font-weight: 500;
   display: inline-block;
   margin: 0 65px 10px 0;
+}
+
+.Activity img {
+  width: 15px;
+  vertical-align: middle;
 }
 
 .current-stats {
@@ -38,9 +45,23 @@
   opacity: 0.7;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 583px) {
   .Activity-Card,
   .Activity {
     grid-column: 1 / -1;
+    height: 100px;
+  }
+
+  .Activity {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 30px 30px;
+    align-items: center;
+    row-gap: 10px;
+    padding: 10px 20px 40px 20px;
+  }
+
+  .Activity img {
+    justify-self: end;
   }
 }

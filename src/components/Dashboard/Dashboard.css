@@ -2,11 +2,13 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 1fr));
   grid-gap: 1.5rem;
+  /* width: 650px; */
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 583px) {
   .Dashboard-grid {
     /* Collapses into 1 column */
     grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
   }
 }
