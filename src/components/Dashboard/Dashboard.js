@@ -2,10 +2,12 @@ import React from 'react';
 import './Dashboard.css';
 import Activity from '../Activity/Activity';
 
-const Dashboard = () => {
+const Dashboard = ({ activities }) => {
   return (
     <section className="Dashboard-grid">
-      <Activity />
+      {activities.map((activity, idx) => (
+        <Activity key={idx} {...activity} />
+      ))}
     </section>
   );
 };
