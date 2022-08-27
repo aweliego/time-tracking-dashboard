@@ -14,10 +14,16 @@
   color: #fff;
 }
 
+@media only screen and (max-width: 811px) {
+  .App-container {
+    margin: 5rem 2rem;
+  }
+}
+
+
 @media only screen and (max-width: 700px) {
   .App-container {
     /* Collapses into 1 column */
     grid-template-columns: 1fr;
-    margin: 5rem 2rem;
   }
 }

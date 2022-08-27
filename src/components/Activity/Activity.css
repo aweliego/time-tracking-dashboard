@@ -1,5 +1,6 @@
 .Activity-Card {
   background: hsl(15, 100%, 70%) url(../../../public/images/icon-work.svg) no-repeat 85% -18%;
+  cursor: pointer;
 }
 
 .Activity {
@@ -7,6 +8,10 @@
   padding: 10px;
   z-index: 1;
   position: relative;
+}
+
+.Activity:hover {
+  background-color: rgb(61, 65, 129)
 }
 
 .Activity-Card,
@@ -23,12 +28,17 @@
   font-size: 18px;
   font-weight: 500;
   display: inline-block;
-  margin: 0 65px 10px 0;
+  margin: 0 75px 10px 0;
 }
 
 .Activity img {
-  width: 15px;
+  width: 20px;
   vertical-align: middle;
+  opacity: 0.7;
+}
+
+.Activity img:hover {
+  opacity: 1;
 }
 
 .current-stats {
@@ -42,7 +52,12 @@
   opacity: 0.7;
 }
 
-@media only screen and (max-width: 583px) {
+@media only screen and (max-width: 811px) {
+
+  .Activity-Card {
+    background-position: 85% -85%;
+  }
+  
   .Activity-Card,
   .Activity {
     grid-column: 1 / -1;

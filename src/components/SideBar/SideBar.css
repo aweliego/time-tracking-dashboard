@@ -17,7 +17,7 @@
 }
 
 .user {
-  background-color: hsl(259, 88%, 53%);
+  background-color: hsl(246, 80%, 60%);
   font-weight: 300;
   border-radius: 10px;
   padding: 10px;
@@ -42,9 +42,10 @@
 .timeframes li {
   padding: 10px 0;
   opacity: 0.5;
+  cursor: pointer;
 }
 
-.timeframes .active {
+.timeframes .active, .timeframes li:hover {
   opacity: 1;
 }
 
