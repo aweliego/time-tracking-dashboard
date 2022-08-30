@@ -5,16 +5,21 @@ import Dashboard from '../Dashboard/Dashboard';
 import data from '../../data/data.json';
 import { useState, useEffect } from 'react';
 
+const timeframes = ['Daily', 'Weekly', 'Monthly'];
+
 const App = () => {
   const [activities, setActivities] = useState([]);
 
-  useEffect(() => setActivities(data), []);
+  const [timeframe, setTimeframe] = useState('weekly');
 
+  useEffect(() => setActivities(data), [timeframe]);
+
+  const selectTimeframe = (clickedTimeframe) => setTimeframe(clickedTimeframe.toLowerCase());
 
   return (
     <article className="App-container">
-      <SideBar />
-      <Dashboard activities={activities} />
+      <SideBar timeframes={timeframes} selectTimeframe={selectTimeframe} />
+      <Dashboard activities={activities} timeframe={timeframe} />
     </article>
   );
 };

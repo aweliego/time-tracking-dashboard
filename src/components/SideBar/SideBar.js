@@ -1,7 +1,7 @@
 import React from 'react';
 import './SideBar.css';
 
-const SideBar = () => {
+const SideBar = ({ timeframes, selectTimeframe }) => {
   return (
     <header className="SideBar">
       <section className="user">
@@ -14,9 +14,11 @@ const SideBar = () => {
 
       <nav>
         <ul className="timeframes">
-          <li>Daily</li>
-          <li className="active">Weekly</li>
-          <li>Monthly</li>
+          {timeframes.map((timeframe, index) => (
+            <li key={index} onClick={() => selectTimeframe(timeframe)}>
+              {timeframe}
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
