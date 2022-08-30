@@ -34,16 +34,23 @@ const Activity = ({ title, timeframes, timeframe }) => {
     }
   };
 
+  const currentStats = timeframes[timeframe].current;
+  const previousStats = timeframes[timeframe].previous;
+  console.log(currentStats);
+
   return (
     <article className={`Activity-Card ${getBackground(title)}`}>
       <div className="background-icon"></div>
       <section className="Activity">
         <h4 className="title">{title}</h4>
         <img src="../../../images/icon-ellipsis.svg" alt="ellipsis" />
-        <p className="current-stats">{timeframes[timeframe].current}hrs</p>
+        <p className="current-stats">
+          {currentStats}
+          {currentStats === 1 ? 'hr' : 'hrs'}
+        </p>
         <p className="previous-stats">
-          {getPreviousTimeframe(timeframe)} - {timeframes[timeframe].previous}
-          hrs
+          {getPreviousTimeframe(timeframe)} - {previousStats}
+          {previousStats === 1 ? 'hr' : 'hrs'}
         </p>
       </section>
     </article>
