@@ -36,7 +36,6 @@ const Activity = ({ title, timeframes, timeframe }) => {
 
   const currentStats = timeframes[timeframe].current;
   const previousStats = timeframes[timeframe].previous;
-  console.log(currentStats);
 
   return (
     <article className={`Activity-Card ${getBackground(title)}`}>
