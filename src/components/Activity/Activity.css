@@ -1,13 +1,12 @@
 .Activity-Card.work {
   background: hsl(15, 100%, 70%) url(../../../public/images/icon-work.svg)
     no-repeat 95% -10%;
-    background-size: 77px;
+  background-size: 77px;
 }
 
 .Activity-Card.play {
   background: hsl(195, 74%, 62%) url(../../../public/images/icon-play.svg)
     no-repeat 95% -8%;
-    
 }
 
 .Activity-Card.study {
@@ -17,27 +16,26 @@
 
 .Activity-Card.exercise {
   background: hsl(145, 58%, 55%) url(../../../public/images/icon-exercise.svg)
-    no-repeat 95% -5% ;
-    background-size: 90px;
+    no-repeat 95% -5%;
+  background-size: 90px;
 }
 
 .Activity-Card.social {
   background: hsl(264, 64%, 52%) url(../../../public/images/icon-social.svg)
     no-repeat 95% -18%;
-    background-size: 65px;
+  background-size: 65px;
 }
 
 .Activity-Card.self-care {
   background: hsl(43, 84%, 65%) url(../../../public/images/icon-self-care.svg)
     no-repeat 95% -12%;
-    background-size: 60px;
+  background-size: 60px;
 }
 
 .Activity {
   background-color: hsl(235, 46%, 20%);
-  padding: 10px;
+  padding: 20px 10px 20px 20px;
   z-index: 1;
-  position: relative;
 }
 
 .Activity:hover {
@@ -46,7 +44,7 @@
 
 .Activity-Card,
 .Activity {
-  height: 190px;
+  height: 185px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -55,16 +53,26 @@
   height: 40px;
 }
 
+.Activity {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 50px 40px 20px;
+  align-items: center;
+  row-gap: 10px;
+  padding: 10px 20px 0 20px;
+}
+
+.Activity img {
+  justify-self: end;
+}
+
 .title {
   font-size: 18px;
   font-weight: 500;
-  display: inline-block;
-  margin: 0 75px 10px 0;
 }
 
 .Activity img {
   width: 20px;
-  vertical-align: middle;
   opacity: 0.7;
 }
 
@@ -81,9 +89,10 @@
 .previous-stats {
   font-size: 0.8rem;
   opacity: 0.7;
+  grid-row: 3 / 3;
 }
 
-@media only screen and (max-width: 811px) {
+@media only screen and (max-width: 1044px) {
   .Activity-Card {
     background-position: 85% -85%;
   }
@@ -91,19 +100,21 @@
   .Activity-Card,
   .Activity {
     grid-column: 1 / -1;
-    height: 100px;
+    height: 120px;
   }
 
   .Activity {
-    display: grid;
-    grid-template-columns: 1fr auto;
     grid-template-rows: 30px 30px;
-    align-items: center;
-    row-gap: 10px;
-    padding: 10px 20px 40px 20px;
+    row-gap: 15px;
+    padding: 20px 20px 50px 20px;
   }
 
   .Activity img {
     justify-self: end;
+  }
+
+  .previous-stats {
+    grid-row: 2/2;
+    grid-column: 2/2;
   }
 }

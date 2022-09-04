@@ -12,9 +12,10 @@
   grid-gap: 1.5rem;
   font-family: Rubik, sans-serif;
   color: #fff;
+  margin-right: 2rem;
 }
 
-@media only screen and (max-width: 811px) {
+@media only screen and (max-width: 1044px) {
   .App-container {
     margin: 5rem 2rem;
   }
