@@ -26,4 +26,5 @@ yarn-error.log*
 
 style-guide.md
 README.md
-README-template.md
+# Local Netlify folder
+.netlify

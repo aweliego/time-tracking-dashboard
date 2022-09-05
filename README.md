@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="./public/images/preview.gif" alt="animated" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend Mentor - Time tracking dashboard solution
 
-## Available Scripts
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Switch between viewing Daily, Weekly, and Monthly stats
 
-### `npm run build`
+### Links
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Solution URL](https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-react-and-css-grid-meG7njxZOn)
+- [Live Site URL](https://time-tracking-dashboard-challenge.netlify.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## My process
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- I first hard coded the activity cards in order to style them and the dashboard grid. The design files only included computer and mobile layouts, I sort of also added styles for tablet.
+- Once the general styles were done, I rendered the activities cards dynamically, with their content still hard coded.
+- Then I focused on the main functionality of the app: rendering the correct stats for each activity when clicking on a timeframe.
+- After that, I completed other small features of the app: highlighting the active timeframe, dynamically showing the previous timeframe text in the card (such as ‘Last Week’), setting the right icon/background for each activity.
+- Finally, the layout of the app and the content of the cards was still a bit wonky and not true to the design, so I made the last adjustements there.
+- I added a small animation on loading for fun. :)
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Semantic HTML5 markup
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tons. The hardest part of the app in my opinion lies more in its (responsive) layout than its functionality. I almost never used CSS grid in past projects as I struggled with it. But this challenge enabled me to get more confident with it and to see how powerful it is. Not just for the general layout but also for content placement, for which I usually only swear by Flexbox.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Although the functionality took me less time to implement, I made the mistake (that I often make) to not have laid out the steps before starting to code, and got into something really convoluted code which kept on throwing errors. I then proceeded to write down the steps, and that’s how I realised I didn’t know how to finish my initial approach. I outlined a second approach, much simpler and concise, that React can accommodate perfectly.
 
-## Learn More
+Once I was on the right track, the only hurdle I ran into was that I was trying to access a property stored in a variable in uppercase while the property in the data object is in lowercase - it took me a while to understand why I got a TypeError when all my console logs showed that the value was defined.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Continued development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In future projects I will certainly use CSS Grid again. I've also for the first time made use of switch statements and they do really came in handy!
 
-### Code Splitting
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [freeCodeCamp CSS grid course](https://www.freecodecamp.org/learn/2022/responsive-web-design/#learn-css-grid-by-building-a-magazine) - I followed FCC updated tutorial on CSS Grid before starting working on the challenge as I needed a refresher on grids and was not very confident using them at all before starting with the challenge. This course helped a lot!
+- [CSS tricks](https://www.example.com) - Always a great resource, it really helped to look up grid properties and understand them.
+- [Code 15 React Projects](https://www.youtube.com/watch?v=a_7Z7C_JCyo&ab_channel=freeCodeCamp.org) I feel like I made so much progress quickly in React thanks to these follow along projects provided by John Smilga. I had completed a few prior to this challenge and referred back to them when I was stuck.
+- [This StackOverflow's answer](https://stackoverflow.com/a/41610263/14697954) - I was searching for how to display the cards one after the other on start up and with pure CSS, this reply was exactly what I needed!
